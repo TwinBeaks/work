@@ -317,6 +317,9 @@ std::vector<unsigned short> cc_utf16_vec_from_utf16_str(const unsigned short* st
  *
  * Return value: number of bytes written
  **/
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wtautological-compare"
+
 int
 cc_unichar_to_utf8 (unsigned short c,
                    char   *outbuf)
@@ -368,6 +371,8 @@ cc_unichar_to_utf8 (unsigned short c,
     
     return len;
 }
+#pragma clang diagnostic pop
+
 
 #define SURROGATE_VALUE(h,l) (((h) - 0xd800) * 0x400 + (l) - 0xdc00 + 0x10000)
 
@@ -396,6 +401,8 @@ cc_unichar_to_utf8 (unsigned short c,
  *               error occurs, %NULL will be returned and
  *               @error set.
  **/
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wtautological-compare"
 char *
 cc_utf16_to_utf8 (const unsigned short  *str,
                  long             len,
@@ -510,5 +517,6 @@ err_out:
     
     return result;
 }
+#pragma clang diagnostic pop
 
 NS_CC_END

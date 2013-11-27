@@ -30,11 +30,12 @@ THE SOFTWARE.
 Config of cocos2d-x project, per target platform.
 */
 
+
 //////////////////////////////////////////////////////////////////////////
 // pre configure
 //////////////////////////////////////////////////////////////////////////
 
-#define CC_TARGET_OS_IPHONE 1
+//#define CC_TARGET_OS_IPHONE 1
 
 // define supported target platform macro which CC uses.
 #define CC_PLATFORM_UNKNOWN            0
@@ -147,4 +148,3 @@ Config of cocos2d-x project, per target platform.
 #endif  // CC_PLATFORM_WIN32
 
 #endif  // __CC_PLATFORM_CONFIG_H__
-

@@ -26,10 +26,10 @@
 #define __SCRIPT_SUPPORT_H__
 
 #include "platform/CCCommon.h"
-#include "platform/ios/CCAccelerometer.h"
+//#include "platform/ios/CCAccelerometer.h" // cwb
 #include "touch_dispatcher/CCTouch.h"
 #include "cocoa/CCSet.h"
-#include "platform/ios/CCAccelerometer.h"
+
 #include <map>
 #include <string>
 #include <list>

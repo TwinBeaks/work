@@ -354,14 +354,14 @@ bool CCTexture2D::initPremultipliedATextureWithImage(CCImage *image, unsigned in
             
             
             // CWB
-            for(unsigned int i = 0; i < length; ++i)
+            /*for(unsigned int i = 0; i < length; ++i)
             {
                 *outPixel16++ = 
                 (((*inPixel8++ & 0xFF) >> 3) << 11) |  // R
                 (((*inPixel8++ & 0xFF) >> 2) << 5)  |  // G
                 (((*inPixel8++ & 0xFF) >> 3) << 0);    // B
-            }
-            /*for(unsigned int i = 0; i < length; ++i)
+            }*/
+            for(unsigned int i = 0; i < length; ++i)
             {
                 *outPixel16++ =
                 (((inPixel8[0] & 0xFF) >> 3) << 11) |  // R
@@ -369,7 +369,7 @@ bool CCTexture2D::initPremultipliedATextureWithImage(CCImage *image, unsigned in
                 (((inPixel8[2] & 0xFF) >> 3) << 0);    // B
                 
                 inPixel8+=3;
-            }*/
+            }
         }    
     }
     else if (pixelFormat == kCCTexture2DPixelFormat_RGBA4444)

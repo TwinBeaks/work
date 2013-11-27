@@ -27,7 +27,8 @@ THE SOFTWARE.
 #ifndef __CCGLSTATE_H__
 #define __CCGLSTATE_H__
 
-#include "/Users/Aesis/work/cocos/2.2/cocos2dx/platform/ios/CCGL.h"
+//#include "/Users/Aesis/work/cocos/2.2/cocos2dx/platform/ios/CCGL.h"
+#include "platform/mac/CCGL.h"
 #include "platform/CCPlatformMacros.h"
 
 NS_CC_BEGIN

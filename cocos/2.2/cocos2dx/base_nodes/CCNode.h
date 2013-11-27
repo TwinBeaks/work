@@ -31,10 +31,10 @@
 #include "ccMacros.h"
 #include "cocoa/CCAffineTransform.h"
 #include "cocoa/CCArray.h"
-#include "/Users/Aesis/work/cocos/2.2/cocos2dx/platform/ios/CCGL.h"
+#include "CCGL.h"
 #include "shaders/ccGLStateCache.h"
 #include "shaders/CCGLProgram.h"
-#include "/Users/Aesis/work/cocos/2.2/cocos2dx/kazmath/include/kazmath/kazmath.h"
+#include "kazmath/kazmath.h"
 #include "script_support/CCScriptSupport.h"
 #include "CCProtocols.h"
 
