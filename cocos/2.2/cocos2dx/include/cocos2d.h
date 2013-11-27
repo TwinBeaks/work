@@ -135,7 +135,6 @@ THE SOFTWARE.
 #include "platform/CCPlatformMacros.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-#pragma message "WHOA"
     #include "platform/ios/CCAccelerometer.h"
     #include "platform/ios/CCApplication.h"
     #include "platform/ios/CCEGLView.h"

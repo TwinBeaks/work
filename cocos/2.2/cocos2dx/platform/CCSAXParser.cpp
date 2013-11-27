@@ -119,7 +119,7 @@ bool CCSAXParser::parse(const char *pszFile)
     char* pBuffer = (char*)CCFileUtils::sharedFileUtils()->getFileData(pszFile, "rt", &size);
     if (pBuffer != NULL && size > 0)
     {
-        bRet = parse(pBuffer, size);
+        bRet = parse(pBuffer, (unsigned int)size);
     }
     CC_SAFE_DELETE_ARRAY(pBuffer);
     return bRet;

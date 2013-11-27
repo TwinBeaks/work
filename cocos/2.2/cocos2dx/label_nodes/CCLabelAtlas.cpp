@@ -64,7 +64,7 @@ bool CCLabelAtlas::initWithString(const char *string, const char *charMapFile, u
 bool CCLabelAtlas::initWithString(const char *string, CCTexture2D* texture, unsigned int itemWidth, unsigned int itemHeight, unsigned int startCharMap)
 {
     CCAssert(string != NULL, "");
-    if (CCAtlasNode::initWithTexture(texture, itemWidth, itemHeight, strlen(string)))
+    if (CCAtlasNode::initWithTexture(texture, itemWidth, itemHeight, (unsigned int)strlen(string)))
     {
         m_uMapStartChar = startCharMap;
         this->setString(string);
@@ -114,7 +114,7 @@ bool CCLabelAtlas::initWithString(const char *theString, const char *fntFile)
 //CCLabelAtlas - Atlas generation
 void CCLabelAtlas::updateAtlasValues()
 {
-    unsigned int n = m_sString.length();
+    unsigned int n = (unsigned int)m_sString.length();
 
     const unsigned char *s = (unsigned char*)m_sString.c_str();
 

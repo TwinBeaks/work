@@ -35,8 +35,6 @@ Config of cocos2d-x project, per target platform.
 // pre configure
 //////////////////////////////////////////////////////////////////////////
 
-//#define CC_TARGET_OS_IPHONE 1
-
 // define supported target platform macro which CC uses.
 #define CC_PLATFORM_UNKNOWN            0
 #define CC_PLATFORM_IOS                1

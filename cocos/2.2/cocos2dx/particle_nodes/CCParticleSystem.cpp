@@ -356,7 +356,7 @@ bool CCParticleSystem::initWithDictionary(CCDictionary *dictionary, const char *
                     const char *textureData = dictionary->valueForKey("textureImageData")->getCString();
                     CCAssert(textureData, "");
                     
-                    int dataLen = strlen(textureData);
+                    size_t dataLen = strlen(textureData);
                     if(dataLen != 0)
                     {
                         // if it fails, try to get it from the base64-gzipped data    
