@@ -23,6 +23,7 @@ THE SOFTWARE.
 ****************************************************************************/
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
+
 #import "CCImage.h"
 #import "CCFileUtils.h"
 #import "CCCommon.h"
@@ -392,8 +393,13 @@ static bool _initWithString(const char * pText, cocos2d::CCImage::ETextAlign eAl
         
         
         // actually draw the text in the context
-		// XXX: ios7 casting
+        // NOTE: if ___IPHONE_6_0 is defined we are compiling against 6.0 SDK or higher - we are not determining current ios! -CWB
+#if not defined __IPHONE_6_0
+        [str drawInRect:CGRectMake(textOriginX, textOrigingY, textWidth, textHeight) withFont:font lineBreakMode:UILineBreakModeWordWrap alignment:(UITextAlignment)align];
+#else
         [str drawInRect:CGRectMake(textOriginX, textOrigingY, textWidth, textHeight) withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:(NSTextAlignment)align];
+#endif
+        
         
         // pop the context
         UIGraphicsPopContext();
