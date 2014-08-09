@@ -170,7 +170,7 @@ void* CCTexture2D::keepData(void *data, unsigned int length)
 
 bool CCTexture2D::hasPremultipliedAlpha()
 {
-    return m_bHasPremultipliedAlpha;
+    return m_bHasPremultipliedAlpha; 
 }
 
 bool CCTexture2D::initWithData(const void *data, CCTexture2DPixelFormat pixelFormat, unsigned int pixelsWide, unsigned int pixelsHigh, const CCSize& contentSize)

@@ -25,8 +25,9 @@
 #ifndef __CCDATAVISITOR_H__
 #define __CCDATAVISITOR_H__
 
+#include "/usr/include/c++/4.2.1/string"
 #include "platform/CCPlatformMacros.h"
-#include <string>
+
 
 NS_CC_BEGIN
 
